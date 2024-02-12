@@ -7,8 +7,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter matrix dimension: ");
-        int n = scanner.nextInt();
+        int n = 0;
+        while (n <= 0) {
+            try {
+                System.out.print("Enter matrix dimension: ");
+                n = Integer.parseInt(scanner.nextLine());
+                if (n <= 0) System.out.println("Matrix dimension mast be > 0!");
+            } catch (NumberFormatException e) {
+                System.out.println("IT'S NOT A INTEGER!");
+            }
+        }
 
         int[][] matrix = generateMatrix(n);
         System.out.println("Source matrix:");
@@ -32,9 +40,7 @@ public class Main {
 
     public static int calculateDeterminant(int[][] matrix) {
         int n = matrix.length;
-        if (n == 1) {
-            return matrix[0][0];
-        }
+        if (n == 1) return matrix[0][0];
 
         int determinant = 0;
         for (int j = 0; j < n; j++) {
