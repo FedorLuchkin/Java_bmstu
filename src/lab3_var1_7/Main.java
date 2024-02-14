@@ -33,12 +33,19 @@ public class Main {
         }
 
         System.out.println("\nResult array:");
-        for (int i = 0; i < arrSize; i++) {
-            if ((i % 2 == 0) && (i < arrSize - 1)) {
+        for (Fraction fraction : taskMethod(fractions)) {
+            fraction.print();
+        }
+
+    }
+
+    private static Fraction[] taskMethod(Fraction[] fractions) {
+        for (int i = 0; i < fractions.length; i++) {
+            if ((i % 2 == 0) && (i < fractions.length - 1)) {
                 fractions[i] = Fraction.add(fractions[i], fractions[i+1]);
             }
-            fractions[i].print();
         }
+        return fractions;
     }
 
     private static void operationsDemonstration(Fraction first, Fraction second) {
