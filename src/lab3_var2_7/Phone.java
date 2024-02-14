@@ -2,17 +2,17 @@ package lab3_var2_7;
 
 
 public class Phone implements Comparable<Phone> {
-    public int id;
-    public String lastname;
-    public String firstname;
-    public String surname;
-    public String address;
-    public int creditCard;
-    public double debit;
-    public double credit;
+    private int id;
+    private String lastname;
+    private String firstname;
+    private String surname;
+    private String address;
+    private int creditCard;
+    private double debit;
+    private double credit;
 
-    public int cityCallsMinutes;
-    public int longDistanceCallsMinutes;
+    private int cityCallsMinutes;
+    private int longDistanceCallsMinutes;
 
     public Phone(int id, String lastname, String firstname, String surname,
                  String address, int creditCard, double debit, double credit,

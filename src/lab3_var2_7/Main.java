@@ -12,7 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(in);
 
         int n = random.nextInt(5) + 2;
-        out.println(n);
+        out.printf("Input info about %d users\n", n);
         Phone[] users = new Phone[n];
 
         for (int i = 0; i < n; i++) {
@@ -35,7 +35,6 @@ public class Main {
             users[i] = new Phone(id, lastname, firstname, surname,
                                  address, creditCard, debit, credit,
                                  cityCallsMinutes, longDistanceCallsMinutes);
-            // out.println(users[i]);
         }
         out.println("Source array:");
         printAll(users);
@@ -58,7 +57,7 @@ public class Main {
     private static void exceedingCityCallsTime(int limit, Phone[] users) {
         int flag = 0;
         for (Phone user : users) {
-            if (user.cityCallsMinutes > limit) {
+            if (user.getCityCallsMinutes() > limit) {
                 out.println(user);
                 flag = 1;
             }
@@ -69,7 +68,7 @@ public class Main {
     private static void longDistanceCallsUsage(Phone[] users) {
         int flag = 0;
         for (Phone user : users) {
-            if (user.longDistanceCallsMinutes > 0) {
+            if (user.getLongDistanceCallsMinutes() > 0) {
                 out.println(user);
                 flag = 1;
             }
