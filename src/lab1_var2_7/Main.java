@@ -41,7 +41,7 @@ public class Main {
         System.out.printf("Least Common Multiple = %d", leastCommonMultiple);
     }
 
-    private static int getGreatestCommonDivisor(int first, int second) {
+    public static int getGreatestCommonDivisor(int first, int second) {
         int res = 1;
         if (first < second) first += second - (second = first);
 
