@@ -1,9 +1,10 @@
 package lab2_var1_7;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 import static java.lang.System.*;
+
 
 public class Main {
     public static void main(String[] args) {

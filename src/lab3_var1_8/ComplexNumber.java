@@ -1,5 +1,6 @@
 package lab3_var1_8;
 
+
 public class ComplexNumber {
     private double re;
     private double im;

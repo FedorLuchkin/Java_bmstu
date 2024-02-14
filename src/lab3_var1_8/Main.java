@@ -2,6 +2,7 @@ package lab3_var1_8;
 
 import java.util.Random;
 
+
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();

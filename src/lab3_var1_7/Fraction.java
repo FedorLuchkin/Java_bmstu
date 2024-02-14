@@ -2,6 +2,7 @@ package lab3_var1_7;
 
 import static lab1_var2_7.Main.getGreatestCommonDivisor;
 
+
 public class Fraction {
     private int m;
     private int n;

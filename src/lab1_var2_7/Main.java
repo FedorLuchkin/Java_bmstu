@@ -1,6 +1,7 @@
 package lab1_var2_7;
 import java.util.*;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
