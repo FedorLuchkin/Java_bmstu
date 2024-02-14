@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Source matrix:");
         printMatrix(matrix);
 
-        for (int i=1; i<4; i++) {
+        for (int i = 1; i < 4; i++) {
             matrix = rotateMatrix(matrix);
             System.out.printf("Matrix after rotating %d degrees counterclockwise:\n", i * 90);
             printMatrix(matrix);

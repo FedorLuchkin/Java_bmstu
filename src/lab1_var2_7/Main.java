@@ -32,7 +32,7 @@ public class Main {
         int greatestCommonDivisor = getGreatestCommonDivisor(arr[0], arr[1]);
         int leastCommonMultiple = arr[0] * arr[1] / greatestCommonDivisor;
 
-        for (int i=2; i<n; i++) {
+        for (int i = 2; i < n; i++) {
             greatestCommonDivisor = getGreatestCommonDivisor(greatestCommonDivisor, arr[i]);
             leastCommonMultiple = leastCommonMultiple * arr[i] / greatestCommonDivisor;
         }

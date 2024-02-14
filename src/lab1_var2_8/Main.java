@@ -32,7 +32,7 @@ public class Main {
 
         // TASK
         int flag = 0;
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             if (BigInteger.valueOf(arr[i]).isProbablePrime(1)) {
                 if (flag == 0) {
                     System.out.print("Prime numbers:");
