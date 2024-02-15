@@ -35,7 +35,7 @@ public class Phone implements Comparable<Phone> {
                 Phone = {
                 \tid: %d; lastname: %s; firstname: %s; surname: %s;
                 \taddress: %s; creditCard: %d;
-                \tdebit: .3%f; credit: .3%f;
+                \tdebit: %.3f; credit: %.3f;
                 \tcityCallsMinutes: %d; longDistanceCallsMinutes: %d
                 }""",
                 id, lastname, firstname, surname, address,creditCard, debit, credit, cityCallsMinutes, longDistanceCallsMinutes);

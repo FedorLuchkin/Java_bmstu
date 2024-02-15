@@ -1,7 +1,6 @@
 package lab3_var4_8;
 
 import java.util.Arrays;
-
 import static java.lang.System.out;
 
 

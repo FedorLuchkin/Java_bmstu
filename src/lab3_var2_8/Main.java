@@ -50,9 +50,8 @@ public class Main {
         int year = scanner.nextInt();
         out.println("------------------\nSet car price for filter №3:");
         double price = scanner.nextDouble();
-        yearPriceFilter(year, price, cars);
         out.printf("------------------\nCars released in %d that more expensive than %.3f:\n", year, price);
-        oldModelFilter(model, yearCount, cars);
+        yearPriceFilter(year, price, cars);
     }
 
     private static void printAll(Car[] cars) {

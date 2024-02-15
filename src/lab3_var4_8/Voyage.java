@@ -1,5 +1,6 @@
 package lab3_var4_8;
 
+
 public class Voyage {
     private int state;
 
@@ -14,7 +15,6 @@ public class Voyage {
     public void setState(int state) {
         this.state = state;
     }
-
 
     @Override
     public String toString() {
