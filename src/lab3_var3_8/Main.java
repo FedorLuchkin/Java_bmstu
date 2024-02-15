@@ -1,11 +1,15 @@
 package lab3_var3_8;
 
+import static java.lang.System.out;
+
 
 public class Main {
     public static void main(String[] args) {
+        out.println("Random piano with 5 keys");
         Piano piano = new Piano(5);
         System.out.println(piano);
 
+        out.println("\nHandmade piano");
         Key[] keys = new Key[3];
         keys[0] = new Key("lol");
         keys[1] = new Key("kek");
@@ -13,6 +17,7 @@ public class Main {
         piano.setKeys(keys);
         System.out.println(piano);
 
+        out.println("\nRandom piano");
         piano = new Piano();
         System.out.println(piano);
 

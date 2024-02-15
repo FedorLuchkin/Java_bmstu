@@ -66,7 +66,7 @@ public class Tree {
 
     public void bloom() {
         Random random = new Random();
-        this.leafCount = random.nextInt(10);
+        this.leafCount = random.nextInt(10) + 2;
         this.leaves = new Leaf[this.leafCount];
         for (int i = 0; i < this.leafCount; i++) {
             this.leaves[i] = new Leaf("blooms");
@@ -86,6 +86,6 @@ public class Tree {
     }
 
     public void fall() {
-        this.leaves = new Leaf[0];
+        setLeaves(new Leaf[0]);
     }
 }
