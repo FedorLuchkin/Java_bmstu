@@ -1,12 +1,12 @@
-package lab3_var3_7;
+package lab3_var3_8;
 
 import java.util.Objects;
 
 
-public class Leaf {
+public class Key {
     private String state;
 
-    public Leaf(String state){
+    public Key(String state){
         this.state = state;
     }
 
@@ -21,8 +21,8 @@ public class Leaf {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Leaf leaf)) return false;
-        return Objects.equals(leaf.getState(), getState());
+        if (!(o instanceof Key key)) return false;
+        return Objects.equals(key.getState(), getState());
     }
 
     @Override
@@ -32,6 +32,7 @@ public class Leaf {
 
     @Override
     public String toString() {
-        return String.format("leaf: {state: '%s'}", getState());
+        return String.format("key: {state: '%s'}", getState());
     }
+
 }
