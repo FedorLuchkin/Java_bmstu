@@ -7,7 +7,7 @@ public class Key {
     private String state;
 
     public Key(String state){
-        this.state = state;
+        this.setState(state);
     }
 
     public String getState() {

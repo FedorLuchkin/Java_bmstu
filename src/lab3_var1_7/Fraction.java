@@ -8,12 +8,12 @@ public class Fraction {
     private int n;
 
     public Fraction() {
-        this.m = 1;
-        this.n = 1;
+        this.setM(1);
+        this.setN(1);
     }
     public Fraction(int m, int n) {
-        this.m = m;
-        this.n = n;
+        this.setM(m);
+        this.setN(n);
     }
 
     public int getM() {

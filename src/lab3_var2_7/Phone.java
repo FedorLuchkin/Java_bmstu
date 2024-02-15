@@ -17,16 +17,16 @@ public class Phone implements Comparable<Phone> {
     public Phone(int id, String lastname, String firstname, String surname,
                  String address, int creditCard, double debit, double credit,
                  int cityCallsMinutes, int longDistanceCallsMinutes) {
-        this.id = id;
-        this.lastname = lastname;
-        this.firstname = firstname;
-        this.surname = surname;
-        this.address = address;
-        this.creditCard = creditCard;
-        this.debit = debit;
-        this.credit = credit;
-        this.cityCallsMinutes = cityCallsMinutes;
-        this.longDistanceCallsMinutes = longDistanceCallsMinutes;
+        this.setId(id);
+        this.setLastname(lastname);
+        this.setFirstname(firstname);
+        this.setSurname(surname);
+        this.setAddress(address);
+        this.setCreditCard(creditCard);
+        this.setDebit(debit);
+        this.setCredit(credit);
+        this.setCityCallsMinutes(cityCallsMinutes);
+        this.setLongDistanceCallsMinutes(longDistanceCallsMinutes);
     }
 
     @Override

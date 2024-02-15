@@ -12,11 +12,11 @@ public class User {
     private Service[] services;
     private String state;
     public User(int number, double balance, double debtForCalls, Service[] services) {
-        this.number = number;
-        this.balance = balance;
-        this.debtForCalls = debtForCalls;
-        this.services = services;
-        this.state = "On";
+        this.setNumber(number);
+        this.setBalance(balance);
+        this.setDebtForCalls(debtForCalls);
+        this.setServices(services);
+        this.setState("On");
     }
 
     public int getNumber() {

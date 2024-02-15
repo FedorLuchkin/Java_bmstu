@@ -6,12 +6,12 @@ public class ComplexNumber {
     private double im;
 
     public ComplexNumber() {
-        this.re = 1;
-        this.im = 0;
+        this.setRe(1);
+        this.setIm(0);
     }
     public ComplexNumber(double re, double im) {
-        this.re = re;
-        this.im = im;
+        this.setRe(re);
+        this.setIm(im);
     }
 
     public double getRe() {

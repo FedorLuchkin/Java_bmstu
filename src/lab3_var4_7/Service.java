@@ -8,14 +8,14 @@ public class Service {
     private double cost;
 
     public Service(String name, double cost){
-        this.name = name;
-        this.cost = cost;
+        this.setName(name);
+        this.setCost(cost);
     }
 
     public Service(String name){
         Random random = new Random();
-        this.name = name;
-        this.cost = random.nextInt(10) + 10;
+        this.setName(name);
+        this.setCost(random.nextInt(10) + 10);
     }
 
     public String getName() {

@@ -15,13 +15,13 @@ public class Car {
 
     public Car(int id, String brand, String model, int yearOfManufacture,
                String color, double price, String regNum) {
-        this.id = id;
-        this.brand = brand;
-        this.model = model;
-        this.yearOfManufacture = yearOfManufacture;
-        this.color = color;
-        this.price = price;
-        this.regNum = regNum;
+        this.setId(id);
+        this.setBrand(brand);
+        this.setModel(model);
+        this.setYearOfManufacture(yearOfManufacture);
+        this.setColor(color);
+        this.setPrice(price);
+        this.setRegNum(regNum);
     }
 
     @Override

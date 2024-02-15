@@ -7,7 +7,7 @@ public class Leaf {
     private String state;
 
     public Leaf(String state){
-        this.state = state;
+        this.setState(state);
     }
 
     public String getState() {
