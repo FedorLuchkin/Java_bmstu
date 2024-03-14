@@ -1,4 +1,4 @@
-package lab3_var1_7;
+package lab5_var1_7;
 
 import java.util.Random;
 
@@ -57,10 +57,14 @@ public class Main {
         Fraction fractionQuotient = Fraction.divide(first, second);
         System.out.printf("First fraction: %d/%d\n", first.getM(), first.getN());
         System.out.printf("Second fraction: %d/%d\n", second.getM(), second.getN());
+        assert fractionSum != null;
         System.out.printf("Sum fraction: %d/%d\n", fractionSum.getM(), fractionSum.getN());
+        assert fractionDiff != null;
         System.out.printf("Diff fraction: %d/%d\n", fractionDiff.getM(), fractionDiff.getN());
+        assert fractionMultiple != null;
         System.out.printf("Multiple fraction: %d/%d\n",
                 fractionMultiple.getM(), fractionMultiple.getN());
+        assert fractionQuotient != null;
         System.out.printf("Quotient of fractions: %d/%d\n--------------------\n",
                 fractionQuotient.getM(), fractionQuotient.getN());
     }

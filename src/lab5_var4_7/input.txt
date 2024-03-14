@@ -1,0 +1,10 @@
+public class Example {
+     public static void main(String[] args) {
+          System.out.println("Пример текста с лишними пробелами и табуляциями");
+                    if (true) {
+               System.out.println("Условие выполнено");
+          }      else {
+                    System.out.println("Условие не выполнено");
+          }
+     }
+}
