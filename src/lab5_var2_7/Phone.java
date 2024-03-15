@@ -1,6 +1,5 @@
 package lab5_var2_7;
 
-
 public class Phone implements Comparable<Phone> {
     private int id;
     private String lastname;
@@ -28,7 +27,7 @@ public class Phone implements Comparable<Phone> {
             this.setCredit(credit);
             this.setCityCallsMinutes(cityCallsMinutes);
             this.setLongDistanceCallsMinutes(longDistanceCallsMinutes);
-        } catch (IllegalArgumentException e) {
+        } catch (InvalidInputException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
@@ -69,9 +68,9 @@ public class Phone implements Comparable<Phone> {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id) throws InvalidInputException {
         if (id <= 0) {
-            throw new IllegalArgumentException("ID must be a positive integer.");
+            throw new InvalidInputException("ID must be a positive integer.");
         }
         this.id = id;
     }
@@ -80,9 +79,9 @@ public class Phone implements Comparable<Phone> {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
+    public void setLastname(String lastname) throws InvalidInputException {
         if (lastname == null || lastname.isEmpty()) {
-            throw new IllegalArgumentException("Lastname cannot be null or empty.");
+            throw new InvalidInputException("Lastname cannot be null or empty.");
         }
         this.lastname = lastname;
     }
@@ -91,9 +90,9 @@ public class Phone implements Comparable<Phone> {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
+    public void setFirstname(String firstname) throws InvalidInputException {
         if (firstname == null || firstname.isEmpty()) {
-            throw new IllegalArgumentException("Firstname cannot be null or empty.");
+            throw new InvalidInputException("Firstname cannot be null or empty.");
         }
         this.firstname = firstname;
     }
@@ -102,9 +101,9 @@ public class Phone implements Comparable<Phone> {
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public void setSurname(String surname) throws InvalidInputException {
         if (surname == null || surname.isEmpty()) {
-            throw new IllegalArgumentException("Surname cannot be null or empty.");
+            throw new InvalidInputException("Surname cannot be null or empty.");
         }
         this.surname = surname;
     }
@@ -113,9 +112,9 @@ public class Phone implements Comparable<Phone> {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(String address) throws InvalidInputException {
         if (address == null || address.isEmpty()) {
-            throw new IllegalArgumentException("Address cannot be null or empty.");
+            throw new InvalidInputException("Address cannot be null or empty.");
         }
         this.address = address;
     }
@@ -124,9 +123,9 @@ public class Phone implements Comparable<Phone> {
         return creditCard;
     }
 
-    public void setCreditCard(int creditCard) {
+    public void setCreditCard(int creditCard) throws InvalidInputException {
         if (creditCard <= 0) {
-            throw new IllegalArgumentException("Credit card number must be a positive integer.");
+            throw new InvalidInputException("Credit card number must be a positive integer.");
         }
         this.creditCard = creditCard;
     }
@@ -135,9 +134,9 @@ public class Phone implements Comparable<Phone> {
         return debit;
     }
 
-    public void setDebit(double debit) {
+    public void setDebit(double debit) throws InvalidInputException {
         if (debit < 0) {
-            throw new IllegalArgumentException("Debit amount cannot be negative.");
+            throw new InvalidInputException("Debit amount cannot be negative.");
         }
         this.debit = debit;
     }
@@ -146,9 +145,9 @@ public class Phone implements Comparable<Phone> {
         return credit;
     }
 
-    public void setCredit(double credit) {
+    public void setCredit(double credit) throws InvalidInputException {
         if (credit < 0) {
-            throw new IllegalArgumentException("Credit amount cannot be negative.");
+            throw new InvalidInputException("Credit amount cannot be negative.");
         }
         this.credit = credit;
     }
@@ -157,9 +156,9 @@ public class Phone implements Comparable<Phone> {
         return cityCallsMinutes;
     }
 
-    public void setCityCallsMinutes(int cityCallsMinutes) {
+    public void setCityCallsMinutes(int cityCallsMinutes) throws InvalidInputException {
         if (cityCallsMinutes < 0) {
-            throw new IllegalArgumentException("City calls minutes cannot be negative.");
+            throw new InvalidInputException("City calls minutes cannot be negative.");
         }
         this.cityCallsMinutes = cityCallsMinutes;
     }
@@ -168,9 +167,9 @@ public class Phone implements Comparable<Phone> {
         return longDistanceCallsMinutes;
     }
 
-    public void setLongDistanceCallsMinutes(int longDistanceCallsMinutes) {
+    public void setLongDistanceCallsMinutes(int longDistanceCallsMinutes) throws InvalidInputException {
         if (longDistanceCallsMinutes < 0) {
-            throw new IllegalArgumentException("Long distance calls minutes cannot be negative.");
+            throw new InvalidInputException("Long distance calls minutes cannot be negative.");
         }
         this.longDistanceCallsMinutes = longDistanceCallsMinutes;
     }

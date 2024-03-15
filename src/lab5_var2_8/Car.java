@@ -22,7 +22,7 @@ public class Car {
             this.setColor(color);
             this.setPrice(price);
             this.setRegNum(regNum);
-        } catch (Exception e) {
+        } catch (InvalidInputException e) {
             // Handle exception related to mathematical operations or memory issues
             System.err.println("An error occurred while setting car properties: " + e.getMessage());
         }
@@ -48,7 +48,10 @@ public class Car {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id) throws InvalidInputException {
+        if (id <= 0) {
+            throw new InvalidInputException("ID must be a positive integer.");
+        }
         this.id = id;
     }
 
@@ -56,7 +59,10 @@ public class Car {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setBrand(String brand) throws InvalidInputException {
+        if (brand == null || brand.isEmpty()) {
+            throw new InvalidInputException("brand cannot be null or empty.");
+        }
         this.brand = brand;
     }
 
@@ -64,7 +70,10 @@ public class Car {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(String model) throws InvalidInputException {
+        if (model == null || model.isEmpty()) {
+            throw new InvalidInputException("model cannot be null or empty.");
+        }
         this.model = model;
     }
 
@@ -72,7 +81,10 @@ public class Car {
         return yearOfManufacture;
     }
 
-    public void setYearOfManufacture(int yearOfManufacture) {
+    public void setYearOfManufacture(int yearOfManufacture) throws InvalidInputException {
+        if (yearOfManufacture <= 0) {
+            throw new InvalidInputException("yearOfManufacture must be a positive integer.");
+        }
         this.yearOfManufacture = yearOfManufacture;
     }
 
@@ -80,7 +92,10 @@ public class Car {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(String color) throws InvalidInputException {
+        if (color == null || color.isEmpty()) {
+            throw new InvalidInputException("Color cannot be null or empty.");
+        }
         this.color = color;
     }
 
@@ -88,20 +103,21 @@ public class Car {
         return price;
     }
 
-    public void setPrice(Double price) {
-        try {
-            this.price = price;
-        } catch (Exception e) {
-            // Handle exception related to mathematical operations or memory issues
-            System.err.println("An error occurred while setting car price: " + e.getMessage());
+    public void setPrice(Double price) throws InvalidInputException {
+        if (price <= 0) {
+            throw new InvalidInputException("price must be a positive integer.");
         }
+        this.price = price;
     }
 
     public String getRegNum() {
         return regNum;
     }
 
-    public void setRegNum(String regNum) {
+    public void setRegNum(String regNum) throws InvalidInputException {
+        if (regNum == null || regNum.isEmpty()) {
+            throw new InvalidInputException("regNum cannot be null or empty.");
+        }
         this.regNum = regNum;
     }
 }
