@@ -73,7 +73,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("Operations stops.");
+        System.out.println("Operations were stopped.");
 
     }
 }
